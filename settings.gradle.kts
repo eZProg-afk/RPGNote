@@ -1,16 +1,11 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-    }
-}
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
+        gradlePluginPortal()
         mavenCentral()
+        maven("https://www.jitpack.io")
     }
 }
+
 rootProject.name = "RPG Note"
 include(":app")
