@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="rpg_screenBackgroundColor" format="reference|color" />
+    <attr name="rpg_screenTextColor" format="reference|color" />
+    <attr name="rpg_cardBackgroundColor" format="reference|color" />
+    <attr name="rpg_onCardTextColor" format="reference|color" />
+    <attr name="rpg_imageTintColor" format="reference|color" />
+    <attr name="rpg_onCardImageTintColor" format="reference|color" />
+
+</resources>
