@@ -10,7 +10,7 @@ buildscript {
         classpath(Android.Classpaths.gradle)
         classpath(Android.Classpaths.kotlin)
         classpath(Android.Classpaths.navigation)
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0")
     }
 }
 

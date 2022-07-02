@@ -8,11 +8,13 @@ object Dependencies {
         const val navigationFragmentKtx = "2.3.0-rc01"
         const val navigationUiKtx = "2.3.0-rc01"
         const val lifecycleKtx = "2.2.0"
+        const val fragmentKtx = "1.5.0"
         const val coreKtx = "1.8.0"
         const val appCompat = "1.4.2"
         const val material = "1.6.1"
         const val viewBindingPropertyDelegate = "1.4.2"
         const val roundedImageView = "2.3.0"
+        const val fancyToast = "2.0.1"
         const val constraintlayout = "2.1.4"
         const val koin = "3.2.0"
     }
@@ -37,16 +39,17 @@ object Dependencies {
         "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleKtx}"
     const val lifecycleExtensions =
         "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleKtx}"
-    const val liveDataKtx =
-        "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleKtx}"
+    const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
 
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val material = "com.google.android.material:material:${Versions.material}"
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val constraintlayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
-    const val viewBindingDelegate = "com.kirich1409.viewbindingpropertydelegate:viewbindingpropertydelegate:${Versions.viewBindingPropertyDelegate}"
+    const val viewBindingDelegate =
+        "com.kirich1409.viewbindingpropertydelegate:viewbindingpropertydelegate:${Versions.viewBindingPropertyDelegate}"
     const val roundedImageView = "com.makeramen:roundedimageview:${Versions.roundedImageView}"
+    const val fancyToast = "io.github.shashank02051997:FancyToast:${Versions.fancyToast}"
 
     const val koinCore = "io.insert-koin:koin-core:${Versions.koin}"
     const val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
@@ -59,6 +62,8 @@ fun DependencyHandler.addCommonAndroid() {
     implementation(Dependencies.constraintlayout)
     implementation(Dependencies.viewBindingDelegate)
     implementation(Dependencies.roundedImageView)
+    implementation(Dependencies.fancyToast)
+    implementation(Dependencies.fragmentKtx)
 }
 
 fun DependencyHandler.addDI() {
@@ -70,7 +75,6 @@ fun DependencyHandler.addLifecycle() {
     implementation(Dependencies.lifecycleViewModelKtx)
     implementation(Dependencies.lifecycleRuntimeKtx)
     implementation(Dependencies.lifecycleExtensions)
-    implementation(Dependencies.liveDataKtx)
 }
 
 fun DependencyHandler.addNavigation() {
