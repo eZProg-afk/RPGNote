@@ -4,7 +4,7 @@ import androidx.annotation.DrawableRes
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import spiral.bit.dev.rpgnote.ui.feature.pins.PinDestinations
+import spiral.bit.dev.rpgnote.ui.feature.pins.PinDestination
 
 @Entity(tableName = "pins", indices = [
     Index("pinDestination", unique = true),
@@ -15,5 +15,5 @@ data class PinEntity(
     val id: Int = 0,
     val name: String,
     @DrawableRes val iconResourceId: Int,
-    val pinDestinations: PinDestinations
+    val pinDestination: PinDestination
 )

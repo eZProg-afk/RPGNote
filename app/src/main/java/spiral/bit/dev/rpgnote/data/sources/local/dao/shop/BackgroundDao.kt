@@ -10,6 +10,6 @@ import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.hero.BackgroundEn
 @Dao
 interface BackgroundDao : BaseDao<BackgroundEntity> {
 
-    @Query("SELECT * FROM backgrounds")
-    fun getAllBackgrounds(): Flow<List<BackgroundEntity>>
+    @Query("SELECT * FROM backgrounds WHERE isAlreadyBought = :isFromInventory")
+    fun getAllBackgrounds(isFromInventory: Boolean): Flow<List<BackgroundEntity>>
 }

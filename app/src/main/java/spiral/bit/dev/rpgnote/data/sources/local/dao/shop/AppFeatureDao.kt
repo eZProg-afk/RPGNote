@@ -9,6 +9,6 @@ import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.appFeatures.AppFe
 @Dao
 interface AppFeatureDao : BaseDao<AppFeatureEntity> {
 
-    @Query("SELECT * FROM app_features")
-    fun getAllAppFeatures(): Flow<List<AppFeatureEntity>>
+    @Query("SELECT * FROM app_features WHERE isAlreadyBought = :isFromInventory")
+    fun getAllAppFeatures(isFromInventory: Boolean): Flow<List<AppFeatureEntity>>
 }

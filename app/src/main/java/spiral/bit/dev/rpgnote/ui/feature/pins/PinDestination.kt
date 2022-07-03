@@ -1,6 +1,6 @@
 package spiral.bit.dev.rpgnote.ui.feature.pins
 
-enum class PinDestinations {
+enum class PinDestination {
     SKILLS,
     SHOP,
     STATISTICS,

@@ -9,6 +9,6 @@ import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.appDecorations.Th
 @Dao
 interface ThemeDao : BaseDao<ThemeEntity> {
 
-    @Query("SELECT * FROM themes")
-    fun getAllAppThemes(): Flow<List<ThemeEntity>>
+    @Query("SELECT * FROM themes WHERE isAlreadyBought = :isFromInventory")
+    fun getAllAppThemes(isFromInventory: Boolean): Flow<List<ThemeEntity>>
 }

@@ -2,10 +2,7 @@ package spiral.bit.dev.rpgnote.data.sources.local.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import spiral.bit.dev.rpgnote.data.sources.local.dao.shop.AppFeatureDao
-import spiral.bit.dev.rpgnote.data.sources.local.dao.shop.ArmorDao
-import spiral.bit.dev.rpgnote.data.sources.local.dao.shop.BackgroundDao
-import spiral.bit.dev.rpgnote.data.sources.local.dao.shop.WeaponDao
+import spiral.bit.dev.rpgnote.data.sources.local.dao.shop.*
 import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.appDecorations.ThemeEntity
 import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.appFeatures.AppFeatureEntity
 import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.hero.ArmorEntity
@@ -26,4 +23,5 @@ abstract class ShopDatabase : RoomDatabase() {
     abstract fun weaponDao(): WeaponDao
     abstract fun backgroundDao(): BackgroundDao
     abstract fun appFeatureDao(): AppFeatureDao
+    abstract fun themeDao(): ThemeDao
 }

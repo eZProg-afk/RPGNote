@@ -9,6 +9,6 @@ import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.hero.WeaponEntity
 @Dao
 interface WeaponDao : BaseDao<WeaponEntity> {
 
-    @Query("SELECT * FROM weapons")
-    fun getAllWeapons(): Flow<List<WeaponEntity>>
+    @Query("SELECT * FROM weapons WHERE isAlreadyBought = :isFromInventory")
+    fun getAllWeapons(isFromInventory: Boolean): Flow<List<WeaponEntity>>
 }

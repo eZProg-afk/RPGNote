@@ -9,6 +9,6 @@ import spiral.bit.dev.rpgnote.data.sources.local.entities.shop.hero.ArmorEntity
 @Dao
 interface ArmorDao : BaseDao<ArmorEntity> {
 
-    @Query("SELECT * FROM armor")
-    fun getAllArmor(): Flow<List<ArmorEntity>>
+    @Query("SELECT * FROM armor WHERE isAlreadyBought = :isFromInventory")
+    fun getAllArmor(isFromInventory: Boolean): Flow<List<ArmorEntity>>
 }
